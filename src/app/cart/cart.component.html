@@ -1,0 +1,14 @@
+<p>cart works!</p>
+<div>add product</div>
+<div>remove product</div>
+<div>
+    <input [(ngModel)]="newItem" placeholder="Add item to cart">
+    <button (click)="add()">Add to Cart</button>
+    <ul>
+      <li *ngFor="let item of cartItems; let i = index">
+        {{ item }}
+        <div>{{i}}</div>
+        <button (click)="remove(item)">Remove</button>
+      </li>
+    </ul>
+  </div>
